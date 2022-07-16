@@ -13,7 +13,7 @@ function startTimer(){
   if (tens < 9){
     appendTens.innerHTML = "0"+tens;
   }
-  if (tens>9){
+  if(tens > 9){
     appendTens.innerHTML = tens;
   }
   if (tens > 99){
@@ -26,19 +26,17 @@ function startTimer(){
     appendSeconds.innerHTML = seconds;
   }
 }
-
-
-buttonStart.onclick = function(){
+function start(){
+  buttonStart.onclick = function(){
     interval = setInterval(startTimer,10);
-};
-buttonStop.onclick = function(){
-  clearInterval(interval);
-};
-
-buttonReset.onclick = function(){
-  clearInterval(interval);
-  tens = "00";
-  seconds = "00";
-  appendSeconds.innerHTML = seconds;
-  appendTens.innerHTML = tens;
-};
+    buttonStart.innerHTML = "STOP";
+    buttonStart.onclick = function(){
+      clearInterval(interval);
+      buttonStart.innerHTML = "START";
+      start();
+    }
+  }
+}
+buttonStart.onclick = function(){
+  start();
+}
