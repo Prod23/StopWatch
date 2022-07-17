@@ -17,11 +17,11 @@
         <span id="mins">00</span>: <span id="seconds">00</span>:
         <span id="tens">00</span>
         <br />
-        <button id="start">START</button>
+        <button id="start" onclick="start()">START</button>
         <button id="save">SAVE</button>
         <button id="reset" onclick="window.location.reload();reset()">RESET</button>
         <div class="lapsContainer" align="center">
-          <h3>Laps History</h3>
+          <!-- <h3>Laps History</h3> -->
           <table class="table">
             <thead>
               <tr>
@@ -30,7 +30,9 @@
               </tr>
             </thead>
             <tbody id = "lapHistory" >
-              <p>Click save to record the lap timming.</p>
+              
+              <p>Click save to record each lap timming.</p>
+              <br/>
             </tbody>
           </table>
           <p></p>

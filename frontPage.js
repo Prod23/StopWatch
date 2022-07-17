@@ -40,19 +40,19 @@ function startTimer(){
   }
 }
 function start(){
+  interval = setInterval(startTimer,10);
+  buttonStart.innerHTML = "STOP";
   buttonStart.onclick = function(){
-    interval = setInterval(startTimer,10);
-    buttonStart.innerHTML = "STOP";
+    clearInterval(interval);
+    buttonStart.innerHTML = "START";
     buttonStart.onclick = function(){
-      clearInterval(interval);
-      buttonStart.innerHTML = "START";
       start();
     }
   }
 }
-buttonStart.onclick = function(){
-  start();
-}
+// buttonStart.onclick = function(){
+//   start();
+// }
 buttonSave.addEventListener("click", function(){
   time = mins + ":" + seconds + ":" + tens;
   itemJsonArray = [];

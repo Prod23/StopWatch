@@ -1,5 +1,5 @@
 body {
-    background: #696969;
+    background: #2e2d2d;
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
 }
@@ -7,7 +7,7 @@ body {
 .container{
     width: 800px;
     margin: 30px auto;
-    color: 	#ca83a9;
+    color: 	#d678aa;
     text-align: center;
 }
 .lapsContainer{
@@ -31,7 +31,7 @@ h3{
     width: 100px;
     height: 30px;
     background: translucency;
-    color: black;
+    color: rgb(10, 10, 10);
     border: 4px solid rgb(207, 190, 190);
     border-radius: 5px;
     margin-right: 5px;
@@ -41,7 +41,7 @@ h3{
     width: 150px;
     height: 50px;
     background: rgb(211, 242, 149);
-    color: black;
+    color: rgb(85, 83, 83);
     border: 4px solid rgb(207, 190, 190);
     border-radius: 5px;
     margin-right: 10px;
@@ -51,7 +51,7 @@ h3{
     width: 150px;
     height: 50px;
     background: transparent;
-    color: black;
+    color: rgb(6, 146, 6);
     border: 4px solid rgb(207, 190, 190);
     border-radius: 5px;
     margin-right: 10px;
@@ -63,4 +63,19 @@ h3{
     font-weight: 800px;
     text-transform: capitalize;
 
+}
+.table{
+    margin: 25px 0;
+    font-size: 1em;
+    min-width: 400px;
+}
+
+.table thead tr{
+    background-color: #ffffff;
+    color: #000000;
+    text-align: left;
+}
+.table td{
+    padding: 10px 12px;
+    color:rgb(207, 190, 190);
 }
