@@ -19,7 +19,7 @@ h3{
     font-size: 2.6rem;
     text-transform: capitalize;
 }
-#seconds{
+#mins,#seconds{
     font-size: 8rem;
 }
 #tens{
