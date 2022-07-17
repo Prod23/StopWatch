@@ -7,8 +7,10 @@ let appendSeconds = document.getElementById("seconds");
 let buttonStart = document.getElementById("start");
 let buttonStop = document.getElementById("stop");
 let buttonReset = document.getElementById("reset");
+let buttonSave = document.getElementById("save");
+let tableBody = document.getElementById("lapHistory");
 let interval;
-
+let time;
 
 function startTimer(){
   tens++;
@@ -50,4 +52,33 @@ function start(){
 }
 buttonStart.onclick = function(){
   start();
+}
+buttonSave.addEventListener("click", function(){
+  time = mins + ":" + seconds + ":" + tens;
+  itemJsonArray = [];
+  if(localStorage.getItem("itemsJson") == null){
+    itemJsonArray.push([time]);
+    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+  }
+  else{
+    itemJsonArrayStr = localStorage.getItem('itemsJson');
+    itemJsonArray = JSON.parse(itemJsonArrayStr);
+    itemJsonArray.push([time]);
+    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+  }
+  let str = "";
+  itemJsonArray.forEach((element,index) => {
+  str+= `
+    <tr>
+    <th scope="row">${index+1}</th>
+    <td>${element}</td>
+    </tr>
+  `
+  })
+  lapHistory.innerHTML = str;
+})
+
+function reset(){
+  clear = [];
+  localStorage.setItem('itemsJson', JSON.stringify(clear));
 }

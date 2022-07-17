@@ -18,7 +18,23 @@
         <span id="tens">00</span>
         <br />
         <button id="start">START</button>
-        <button id="reset" onclick="window.location.reload();">RESET</button>
+        <button id="save">SAVE</button>
+        <button id="reset" onclick="window.location.reload();reset()">RESET</button>
+        <div class="lapsContainer" align="center">
+          <h3>Laps History</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Lap Number</th>
+                <th scope="col">Lap Time</th>
+              </tr>
+            </thead>
+            <tbody id = "lapHistory" >
+              <p>Click save to record the lap timming.</p>
+            </tbody>
+          </table>
+          <p></p>
+        </div>
 
         <script src="frontPage.js"></script>
       </p>
